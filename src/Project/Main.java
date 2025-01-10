@@ -19,6 +19,27 @@ public class Main {
 
             int nomeTitolo = scanner.nextInt();
             scanner.nextLine();
+
+
+            switch (choise) {
+                case 1:
+                    System.out.println("insert duration");
+                    int audioDuration= scanner.nextInt();
+                    System.out.println("choise the audio") ;
+                    int volume = scanner.nextInt();
+                    scanner.nextLine();
+                    break;
+
+                case 2:
+                    System.out.println("insert duration video");
+                    int durationVideo= scanner.nextInt();
+                    System.out.println("choise the audio ") ;
+                    int volumeVideo = scanner.nextInt();
+                    System.out.println("choise the brightness ") ;
+                    int brightness = scanner.nextInt();
+                    scanner.nextLine();
+                    break;
+            }
         }
     }
 
