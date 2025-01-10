@@ -1,4 +1,3 @@
-package Project;
 import java.util.Scanner;
 
 
@@ -11,18 +10,20 @@ public class Main {
             System.out.println("Scegli il tipo di elemento multimediale, numero" + (i+1));
             System.out.println("1:audio") ;
             System.out.println("2:video") ;
-            System.out.println("1:immage") ;
+            System.out.println("3:immage") ;
 
             int choise = scanner.nextInt();
             scanner.nextLine();
             System.out.println("insert title");
 
-            int nomeTitolo = scanner.nextInt();
-            scanner.nextLine();
+            String nomeTitolo = scanner.nextLine();
+
 
 
             switch (choise) {
                 case 1:
+                    System.out.println("I stay here") ;
+
                     System.out.println("insert duration");
                     int audioDuration= scanner.nextInt();
                     System.out.println("choise the audio") ;
