@@ -1,10 +1,12 @@
+package Project;
+
 import java.util.Scanner;
 
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+        ElementoMultimediale[] elementiMultimediali = new ElementoMultimediale[5] ;
 
         for( int i = 0 ; i<5 ; i++) {
             System.out.println("Scegli il tipo di elemento multimediale, numero" + (i+1));
@@ -29,6 +31,7 @@ public class Main {
                     System.out.println("choise the audio") ;
                     int volume = scanner.nextInt();
                     scanner.nextLine();
+                    elementiMultimediali[i] = new Audio(nomeTitolo,audioDuration, volume);
                     break;
 
                 case 2:
@@ -39,7 +42,18 @@ public class Main {
                     System.out.println("choise the brightness ") ;
                     int brightness = scanner.nextInt();
                     scanner.nextLine();
+                    elementiMultimediali[i] = new Video(nomeTitolo, durationVideo, volumeVideo, brightness);
                     break;
+
+                case 3 :
+                    System.out.println("insert brightness image");
+                    int brightnessImg = scanner.nextInt();
+                    scanner.nextLine();
+                    elementiMultimediali[i] = new Immage(nomeTitolo,brightnessImg);
+                    break;
+
+                default:
+                    System.out.println("Error") ;
             }
         }
     }
