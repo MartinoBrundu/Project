@@ -1,6 +1,6 @@
 package Project;
 
-public class Video extends ElementoMultimediale implements Riproducibile, Brightness {
+public class Video extends ElementoMultimediale implements Riproducibile, Brightness, Volume {
     private int brightness;
     private int  duration;
     private int vol ;
@@ -11,10 +11,11 @@ public class Video extends ElementoMultimediale implements Riproducibile, Bright
        this.duration = duration;
        this.vol = vol ;
    }
-
-    public void raiseVol(){
+   @Override
+   public void raiseVol(){
         vol++;
     }
+    @Override
     public void lowerVol() {
         if (vol > 0) {
             vol--;
@@ -36,8 +37,16 @@ public class Video extends ElementoMultimediale implements Riproducibile, Bright
 
     @Override
     public void play() {
+        for(int i = 0 ; i<duration;i++) {
+            System.out.println(titolo + "" + "!" .repeat(vol)+""+"*".repeat(brightness));
+        }
 
 
+
+    }
+
+    @Override
+    public void run() {
 
     }
 }

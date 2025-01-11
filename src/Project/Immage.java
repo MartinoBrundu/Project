@@ -21,4 +21,9 @@ private int brightness ;
     public void lowerBrightness() {
         brightness--;
     }
+
+    @Override
+    public void run() {
+
+    }
 }
