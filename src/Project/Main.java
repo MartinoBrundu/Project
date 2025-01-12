@@ -93,24 +93,24 @@ public class Main {
                     } else {
                         System.out.println("Emily, Hai scelto un immagine");
                     }}
-            } else if (sceltaVoce == 7) {
+            } else if (choiseVoice == 7) {
                 System.out.println("scegli l'elemento di cui vuoi modificare la luminosità tra 1 e 5");
                 int elementoModificareL = scanner.nextInt();
                 if (elementoModificareL >= 1 && elementoModificareL <= 5) {
                     ElementoMultimediale elemento = elementiMultimediali[elementoModificareL - 1];
 
-                    if (elemento instanceof Immagine) {
-                        Immagine immagine = (Immagine) elemento;
-                        System.out.println("la luminosità attuale è: " + immagine.getLuminosita());
+                    if (elemento instanceof Immage) {
+                        Immage immagine = (Immage) elemento;
+                        System.out.println("la luminosità attuale è: " + immagine.getBrightness());
                         System.out.println("inserisci la nuova luminosità");
                         int nuovoV = scanner.nextInt();
                         immagine.setLuminosita(nuovoV);
-                        System.out.println("la luminosità attuale è  " + immagine.getLuminosita());
+                        System.out.println("la luminosità attuale è  " + immagine.getBrightness());
                     } else {
                         System.out.println("Emily, Hai scelto un audio");
                     }
                 }
-            } else if (sceltaVoce == 8) {
+            } else if (choiseVoice == 8) {
                 System.out.println("Ecco tutti gli elementi che hai creato");
                 for (int i = 0; i < elementiMultimediali.length; i++) {
                     if (elementiMultimediali[i] != null) {
@@ -120,12 +120,11 @@ public class Main {
                 }
             }
 
-        } while (sceltaVoce != 0);
+        } while (choiseVoice != 0);
         scanner.close();
     }
 }
 
-    }
 
 
-}
+
