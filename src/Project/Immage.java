@@ -22,8 +22,29 @@ private int brightness ;
         brightness--;
     }
 
+    public void show(){
+        System.out.println(titolo + " " + "*".repeat(brightness));
+    }
+
+
     @Override
     public void run() {
+        show();
 
     }
-}
+    @Override
+    public String toString() {
+        return "Image{" +
+                "luminosita=" + brightness+
+                '}';
+    }
+
+    public int getBrightness() {
+        return brightness;
+    }
+
+    public void setLuminosita(int newVol) {
+        this.brightness=newVol;
+    }
+
+};
