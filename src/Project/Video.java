@@ -47,6 +47,23 @@ public class Video extends ElementoMultimediale implements Riproducibile, Bright
 
     @Override
     public void run() {
+        play();
 
+    }
+    public int getVolume() {
+        return vol;
+    }
+
+    public void setVolume(int newVol) {
+        this.vol=newVol;
+    }
+
+    @Override
+    public String toString() {
+        return "Video{" +
+                "durata=" + duration +
+                ", luminosita=" + brightness +
+                ", volume=" + vol +
+                '}';
     }
 }
